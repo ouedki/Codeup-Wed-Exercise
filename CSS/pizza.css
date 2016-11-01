@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Sriracha');
+body {
+    font-family: 'Sriracha', cursive;
+}
+h1#topbar {
+    background-color: brown;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+}
+
+div#container {
+
+    background-image: url(../IMG/pizza.jpg);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    animation: pulse 20s infinite;
+}
+@keyframes pulse {
+    0% {background-image: url(../IMG/pizza.jpg);}
+    30% {background-image: url(../IMG/bkrd.jpg);}
+    60% {background-image: url(../IMG/pizza2.jpg);}
+    100% {background-image: url(../IMG/pizza.jpg);}
+
+}
+
+#button-style {
+    position: relative;
+    left: 400px;
+    bottom: 65px;
+    color: #060000;
+    background-color: #ce2613;
+    height: 50px;
+    width: 100px;
+    font-weight: bolder;
+    font-size: 15px;
+    border-radius: 8px;
+    box-shadow: 1px 1px brown,
+    2px 2px brown,
+    3px 3px brown,
+    4px 4px brown,
+    5px 5px brown,
+    6px 6px brown,
+    7px 7px brown,
+    8px 8px brown,
+    9px 9px brown,
+    10px 10px brown,
+    11px 11px brown,
+    12px 12px brown,
+    13px 13px brown;
+}
+
+#button-style:active {
+    margin-top: 12px;
+    margin-left: 10px;
+    box-shadow: 1px 1px brown,
+    2px 2px brown,
+    3px 3px brown;
+}
+
+#toppins{
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.flipbox {
+    width: 250px;
+    height: 210px;
+    margin: 10px;
+    float: left;
+}
+
+.flipbox>.front {
+    position: absolute;
+    transform: perspective(600px) rotateY(0deg);
+    background-image: url(../IMG/meat-veggies.jpg);
+    width: 260px;
+    height: 210px;
+    border-radius: 9px;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+    color: #39b725;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.flipbox>.back {
+    position: absolute;
+    transform: perspective(600px) rotateY(180deg);
+    background-color: red;
+    width: 260px;
+    height: 210px;
+    border-radius: 9px;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+}
+
+.flipbox:hover>.front {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.flipbox:hover>.back {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+#under-flipbox {
+    clear: both;
+}
+
+fieldset {
+    width: 330px;
+    border: solid 9px brown;
+    border-radius: 9px;
+}
+
+#front-meat {
+    background-color: red;
+    color: #060000;
+}
+
+#front-veggies {
+    background-color: #36ff39;
+    color: #060000;
+}
+
+#green {
+    background-color: #36ff39;
+    color: #060000;
+}
+#footer {
+    height: 60px;
+    width: 100%;
+    background-image: url(../IMG/slices.jpg);
+    background-position: 0px 0px;
+    animation: animate-background linear 4s infinite;
+
+}
+@keyframes animate-background {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: -320px 0px;
+    }
+}
+div#menubar {
+    padding: 25px;
+    background-color: brown;
+}
+div#menubar>a {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    background-color: hsla(0, 34%, 19%, 0.42);;
+    color: #000;
+    margin-right: 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.5s linear 0s, color 0.5s linear 0s;
+}
+div#menubar> a:hover {
+    background-color: hsla(64, 77%, 6%, 0.58);;
+    color:#FFF;

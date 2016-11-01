@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Pizza</title>
+    <link rel="stylesheet" href="CSS/pizza.css">
+</head>
+<body>
+<div id="menubar">
+    <a href="pizza-home.html">Home</a>
+    <a href="#">Our Pizzas</a>
+    <a href="#">Deals</a>
+    <a href="#">Contact US</a>
+</div>
+
+    <div id="container">
+    <form method="post" action="#">
+        <label for="email">Please enter your email address:</label>
+        <input name="email" id="email" type="text" placeholder="email here" size="33px"><br>
+
+        <h2 id="toppins">Please choose your toppings:</h2>
+<div class="flipbox">
+    <div class="front"><h3 id="front-meat">Your Choice of Meat</h3></div>
+    <div class="back" id="red">
+        <input name="Pepperoni" type="checkbox" id="Pepperoni">
+        <label for="Pepperoni">Pepperoni</label><br>
+        <input name="sausage" type="checkbox" id="sausage">
+        <label for="sausage">Sausage</label><br>
+        <input type="checkbox" id="ham">
+        <label for="ham">Ham</label><br>
+        <input name="chicken" type="checkbox" id="chicken">
+        <label for="chicken">Chicken</label><br>
+        <input name="bacon" type="checkbox" id="bacon">
+        <label for="bacon">Bacon</label><br>
+        <input name="beef" type="checkbox" id="beef">
+        <label for="beef">Beef</label>
+    </div>
+</div>
+
+        <div class="flipbox">
+            <div class="front"><h3 id="front-veggies">Your Choice of Veggies</h3></div>
+            <div class="back" id="green">
+                <input name="mushrooms" type="checkbox" id="mushrooms">
+                <label for="mushrooms">Mushrooms</label><br>
+                <input name="onions" type="checkbox" id="onions">
+                <label for="onions">Onions</label><br>
+                <input name="cherry_Peppers" type="checkbox" id="cherry_Peppers">
+                <label for="cherry_Peppers">Cherry_Peppers</label><br>
+                <input name="olives" type="checkbox" id="olives">
+                <label for="olives">Olives</label><br>
+                <input name="green_peppers" type="checkbox" id="green_peppers">
+                <label for="green_peppers">Green Peppers</label><br>
+                <input name="jalapeno" type="checkbox" id="jalapeno">
+                <label for="jalapeno">Jalapeno</label>
+            </div>
+        </div>
+<div id="under-flipbox">
+<fieldset id="deliv-fieldset">
+        <legend><h3>Please choose your delivery method: </h3></legend>
+        <label>
+            <input type="radio" name="q1" value="delivery">
+        Delivery
+        </label>
+        <label>
+            <input type="radio" name="q1" value="pickup">
+            Pickup
+        </label>
+</fieldset>
+
+<fieldset id="crust-fieldset">
+        <legend><h3>Please choose your Crust:</h3></legend>
+        <label for="crust"></label>
+        <select id="crust" name="crust">
+            <option>Pan</option>
+            <option>Hand Tossed</option>
+            <option>Thin and Crispy</option>
+        </select>
+</fieldset>
+        <input type="submit" id="button-style" value="Send Order">
+    </form>
+</div>
+</div>
+<div id="footer"></div>
+</body>
+</html>

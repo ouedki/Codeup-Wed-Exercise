@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+h1, h2 {
+    text-decoration: underline;
+}
+body {
+    background-color: #004aa4;
+    background-image: url(../IMG/water.jpg);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #f4f4f4;
+    font-family: 'Special Elite', cursive;
+    background-position: 0px 0px;
+    animation: animate-background linear 15s infinite;
+
+}
+@keyframes animate-background {
+    from {background-position: 0px 0px;}
+    to {background-position: -320px 0px;}
+ul>li {
+    list-style: square ;
+}
+table, th, tr, td {
+    border: 2px solid ghostwhite;
+}
+
+a:link {
+    color:#b95353;
+}
+
+a:visited {
+    color:#65654f;
+}
+
+a:hover {
+    color:blue;
+}
+
+a:active {
+    color:green;
+}

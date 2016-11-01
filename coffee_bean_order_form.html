@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Form</title>
+</head>
+<body>
+<form method="POST" action="http://requestb.in/1cyemdb1">
+    <h3>Please choose your type of roast: </h3>
+    <label>
+        <input type="radio" name="q1" value="dark">
+        Dark
+    </label>
+    <label>
+        <input type="radio" name="q1" value="light">
+        Light
+    </label>
+
+    <h3>Please select a quantity: </h3>
+    <select id="quantity" name="quantity">
+        <option>1-Pound</option>
+        <option>2-Pounds</option>
+        <option>4-Pounds</option>
+        <option>5-Pounds</option>
+        <option>6-Pounds</option>
+    </select>
+
+    <h3>Enter your mailing address: </h3>
+    <form method="post" action="#">
+        <label for="address_line1">Line 1</label>
+        <input name="address_line1" id="address_line1" type="text"><br>
+
+        <label for="address_line2">Line 2</label>
+        <input name="address_line2" id="address_line2" type="text"><br>
+
+
+        <label for="city">City</label>
+        <input name="city" id="city" type="text">
+
+        <label for="state">State</label>
+        <input name="state" id="state" type="text">
+
+        <label for="zipcode">Zip Code</label>
+        <input name="zipcode" id="zipcode" type="text"><br><br>
+        <input type="submit" value="Send order">
+        <input type="checkbox" id="auto_renewal" name="auto_renewal" value="yes" checked>
+        <label for="auto_renewal">Do you want to sign up for auto renewal?</label>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Acme');
+div#bgrweb {
+    background-image: url(../img/web.jpg);
+    background-attachment: fixed;
+    font-family: 'Acme', sans-serif;
+    width: 100%;
+    height: 900px;
+}
+section#about {
+    background-color: #2290ff;
+    text-align: left;
+
+}
+ul#menu>li a {
+    display: inline;
+    float: left;
+    color: white;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.5s linear 0s, color 0.5s linear 0s;
+}
+ul#menu>li:hover a {
+    background-color: hsla(64, 77%, 6%, 0.58);
+    color: #26dfe5;
+}
+ul#menu>li  {
+    display: inline;
+    color: white;
+    margin-right: 10px;
+
+}
+div#container-header{
+    text-align: center;
+    color: #black;
+    margin-top: 230px;
+    font-size: 80px;
+    background-color: #26dfe5;
+    animation: animate-background 20s infinite;
+    opacity: 0.8;
+
+}
+@keyframes animate-background {
+    0% {background-color: #26dfe5; color: black;}
+    20% {background-color: #060791; color: #fad9ff;}
+    40% {background-color: #14161a; color: whitesmoke;}
+    60% {background-color: #f4f4f4; color: #1d0ce5;}
+    80% {background-color: #323a4d; color: whitesmoke;}
+   100% {background-color: #26dfe5; color: black;}
+
+}
+.img-thumbnail {
+    position: relative;
+    left: 390px;
+    bottom: 200px;
+}
+div#bgr {
+    background-color: #79fffa;
+}
+
+#mainDiv {
+    width: 200px;
+    height: 200px;
+    margin: 150px auto;
+    perspective: 800px;
+
+}
+
+#boxDiv {
+    width: 100px;
+    animation: rotate 15s linear infinite;
+    transform-style: preserve-3d;
+
+}
+
+#boxDiv div {
+    width: 200px;
+    position: absolute;
+    height: 200px;
+    opacity: 0.8;
+    color: #14161a;
+    font-size: 90px;
+    text-align: center;
+
+
+}
+#front {
+    transform: translateZ(200px);
+    background-color: #74acb9;
+}
+#back {
+    transform: rotateY(180deg) translateZ(200px);
+    background-color: #82d0ff;
+}
+#left {
+    transform: rotateY(-90deg) translateX(-200px);
+    transform-origin: left;
+    background-color: #82d0ff;
+}
+#right {
+    transform: rotateY(90deg) translateX(200px);
+    transform-origin: right;
+    background-color: #74acb9;
+}
+#top {
+    transform: rotateX(-90deg) translateY(-200px);
+    transform-origin: top;
+    background-color: #82d0ff;
+}
+#bottom {
+    transform: rotateX(90deg) translateY(200px);
+    transform-origin: bottom;
+    background-color: #74acb9;
+}
+@keyframes rotate {
+    0% {transform: rotateY(0);}
+    100% {transform: rotateY(360deg);}

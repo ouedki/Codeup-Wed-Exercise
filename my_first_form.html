@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First HTML Form</title>
+</head>
+<body>
+<h2>User Login</h2>
+<form method="POST" action="http://requestb.in/1efkxba1">
+    <p>
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" placeholder="Enter username">
+    </p>
+    <p>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Enter password">
+    </p>
+    <!--<p>-->
+        <!--<input name="submit" type="submit" value="Login">-->
+    <!--</p>-->
+    <p>
+        <button type="submit">Login</button>
+    </p>
+</form>
+<h2>Compose an Email</h2>
+<form method="POST" action="http://requestb.in/1cyemdb1">
+    <p>
+        <label for="to">To</label>
+        <input id="to" name="to" type="text" size="25">
+    </p>
+    <p>
+        <label for="from">From</label>
+        <input id="from" name="from" type="text" size="22">
+    </p>
+    <label for="subject">Subject</label>
+    <input id="subject" name="subject" type="text">
+    </p>
+    <p>
+    <div>Compose</div>
+    <textarea id="email_body" name="email_body" type="text" rows="9" cols="55"></textarea>
+
+    </p>
+    <p>
+        <button type="submit">Send</button>
+    <div>
+        <input type="checkbox" id="save_copy" name="save_copy" value="yes" checked>
+        <label for="save_copy">Do you want to save a copy of this email?</label>
+    </div>
+    </p>
+</form>
+<h2>Multiple Choice Test</h2>
+<form method="POST" action="http://requestb.in/1cyemdb1">
+    <h3>1. Who is the president of the USA?</h3>
+    <label>
+        <input type="radio" name="q1" value="trump" checked>Donald Trump
+    </label>
+    <label>
+        <input type="radio" name="q1" value="pit">Brad Pit
+    </label>
+    <label>
+        <input type="radio" name="q1" value="obama">Barack Obama
+    </label>
+    <label>
+        <input type="radio" name="q1" value="duncun">Tim Duncun
+    </label>
+
+    <br>
+    <br>
+
+    <h3>2. What is the best NBA team in the world?</h3>
+    <label>
+        <input type="radio" name="q2" value="cavaliers" checked="">Cavaliers
+    </label>
+    <label>
+        <input type="radio" name="q2" value="nets">Nets
+    </label>
+    <label>
+        <input type="radio" name="q2" value="golden_states">Golden State
+    </label>
+    <label>
+        <input type="radio" name="q2" value="spurs">Spurs
+    </label>
+
+    <br>
+    <br>
+
+    <h3>3. Select all German made cars?</h3>
+
+    <label><input type="checkbox" id="bmw" name="german_cars[]" value="bmw" checked="">BMW</label>
+    <label><input type="checkbox" id="honda" name="german_cars[]" value="honda">Honda</label>
+    <label><input type="checkbox" id="mercedes" name="german_cars[]" value="mercedes">Mercedes</label>
+    <label><input type="checkbox" id="audi" name="german_cars[]" value="audi">Audi</label>
+
+    <h3>3. Select all German made cars?</h3>
+
+    <label for="cars"></label>
+    <select id="cars" name="cars[]" multiple>
+        <option value="chevy">Chevy</option>
+        <option value="ford">Ford X</option>
+        <option value="bmw">BMW</option>
+        <option value="gmc">GMC</option>
+    </select>
+    <p><button type="submit">Submit</button></p>
+</form>
+<h2>Select Testing</h2>
+<form method="POST" action="http://requestb.in/1cyemdb1">
+    <label for="basketball">Do you like Basketball?</label>
+    <select id="basketball" name="Basketball">
+        <option value="1">Yes</option>
+        <option value="2" selected>No</option>
+    </select>
+    <p><button type="submit">Submit</button></p>
+</form>
+
+</body>
+</html>
