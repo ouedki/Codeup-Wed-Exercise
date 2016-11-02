@@ -9,19 +9,33 @@
 
 <body>
 <div id="bgrweb">
-    <div id="container">
-        <nav>
-            <a class="navbar-brand page-scroll" href="#page-top">Yassine Ouedki</a>
-            <ul id="menu">
-                <li><a href="homepage.html">Home</a></li>
-                <li><a href="#aboutme">About Me</a></li>
-                <li><a href="#">My Portfolio</a></li>
-                <li><a href="#">My Resume</a></li>
-                <li><a href="#">Contact Me</a></li>
-            </ul>
-        </nav>
+    <div class="container-fixed">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header col-xs-3">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" id="nameLink" href="#headerwrap">Yassine Ouedki</a>
+                </div>
+                <div class="col-xs-6">
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+
+                            <li><a class="navLinks" id="firstLink" href="#">Home</a></li>
+                            <li><a class="navLinks" id="secondLink" href="#aboutme-bgrd">About Me</a></li>
+                            <li><a class="navLinks" id="thirdLink" href="">Portfolio</a></li>
+                            <li><a class="navLinks" id="fourthLink" href="#contactme-link">Contact Me</a></li>
+
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
     </div>
-    <img class="img-circle img-responsive" src="img/graduation.jpg" alt="" height="250px" width="200px">
+    <img class="img-circle img-responsive" src="img/graduation.jpg" alt="" hfive="200px" width="150px">
     <div id="mainDiv">
         <div id="boxDiv">
             <div id="front">Yassine Ouedki</div>
@@ -35,22 +49,22 @@
 </div>
 
 <div id="aboutme-bgrd">
-    <a id="aboutme"></a>
-    <div class="container"><h2 id="about-bgrd">About Me</h2>
-        <div class="container">
+    <div class="container">
+        <hr class="style-eight" style="opacity: 0">
+        <h2>About Me</h2>
+        <hr class="style-eight">
             <h3>My Education</h3>
-            <hr>
-        </div>
+            <hr class="style-five">
 
         <div class="media">
             <a class="pull-left" href="#">
-                <img class="media-object img-rounded" src="img/codeup.png" alt="..." height="126px" width="110px"></a>
+                <img class="media-object img-rounded" src="img/codeup.png" alt="..." hfive="126px" width="110px"></a>
             <div class="media-body">
                 <h4 class="media-heading">CodeUp</h4>
                 <h5>Jr. Software Developer - In progress</h5>
                 <p>I love Technology, I love to code, I find it very challenging and fascinating. I like to write the best code with no errors. I have always understood and enjoyed coding lessons. I decide to pursue this very bright career option because it is very easy to me to become a Software Developer and it brings quick success, wealth and glamorous life. But it also requires passion and an intense interest towards coding which I possess.</p>
             </div>
-        </div><hr>
+        </div><hr class="style-five">
 
         <div class="media">
             <a class="pull-left" href="#">
@@ -60,11 +74,11 @@
                 <h5>MBA - Earned in 2011</h5>
                 <p>UIW presented unprecedented scale and diversity of opportunity. My two years of phenomenal professors across the disciplines pushed me to expand, challenge, and adjust my worldview. Twelve four months later and I have an MBA. My MBA journey started with a lot of hopes, ambition and expectations. Those hopes have now been replaced with reality and a chance to continue stepping in the direction of those ambitions.</p>
             </div>
-        </div><hr>
+        </div><hr class="style-five">
 
         <div class="media">
             <a class="pull-left" href="#">
-                <img class="media-object img-rounded" src="img/iihem.jpg" alt="..." height="126px" width="110px"></a>
+                <img class="media-object img-rounded" src="img/iihem.jpg" alt="..." hfive="126px" width="110px"></a>
             <div class="media-body">
                 <h4 class="media-heading">International Institute for Higher Education in Morocco</h4>
                 <h5>B.S in Finance - Earned in 2008</h5>
@@ -81,7 +95,7 @@
             <ul class="timeline">
                 <li>
                     <div class="timeline-badge">
-                        <a><i class="fa fa-circle" id=""></i></a>
+                        <a><i class="fa fa-circle"></i></a>
                     </div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
@@ -99,7 +113,7 @@
 
                 <li class="timeline-inverted">
                     <div class="timeline-badge">
-                        <a><i class="fa fa-circle invert" id=""></i></a>
+                        <a><i class="fa fa-circle invert"></i></a>
                     </div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
@@ -117,7 +131,7 @@
 
                 <li>
                     <div class="timeline-badge">
-                        <a><i class="fa fa-circle" id=""></i></a>
+                        <a><i class="fa fa-circle"></i></a>
                     </div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
@@ -134,7 +148,7 @@
                 </li>
                 <li class="timeline-inverted">
                     <div class="timeline-badge">
-                        <a><i class="fa fa-circle invert" id=""></i></a>
+                        <a><i class="fa fa-circle invert"></i></a>
                     </div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
@@ -152,7 +166,7 @@
 
                 <li>
                     <div class="timeline-badge">
-                        <a><i class="fa fa-circle" id=""></i></a>
+                        <a><i class="fa fa-circle"></i></a>
                     </div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
@@ -172,31 +186,28 @@
                     <div class="timeline-badge">
                         <a><i class="fa fa-circle invert" id=""></i></a>
                     </div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4>Sicma Maroc - Morocco</h4>
-                            <h4>Designer</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p>Developed concepts, graphics and layouts for product illustrations, company logos, and websites using Photophop. Worked with clients, briefed and advised them with regard to design style, format, print production and timescales </p>
-                        </div>
-                        <div class="timeline-footer primary">
-                            <p class="text-right">Jan 2006 - Jun 2008</p>
-                        </div>
-                    </div>
+
                 </li>
                 <li class="clearfix no-float"></li>
             </ul>
         </div>
     </div>
 </div>
+<div id="contactme-bgrd">
+    <a id="contactme-link"></a>
+    <h1 id="contatme">Contact Me</h1>
+    <form class="cf">
+        <div class="half left cf">
+            <input type="text" id="input-name" placeholder="Name">
+            <input type="email" id="input-email" placeholder="Email address">
+            <input type="text" id="input-subject" placeholder="Subject">
+        </div>
+        <div class="half right cf">
+            <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+        </div>
+        <input type="submit" value="Submit" id="input-submit">
+    </form>
+</div>
 </body>
 </html>
 
-</body>
-</html>
-
-</html>
-
-</body>
-</html>
