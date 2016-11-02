@@ -12,26 +12,26 @@
     <div class="container-fixed">
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
-                <div class="navbar-header col-xs-3">
+
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" id="nameLink" href="#headerwrap">Yassine Ouedki</a>
-                </div>
-                <div class="col-xs-6">
+
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
 
+                            <li><a class="navLinks" id="hiddenLink" href="#" style="opacity: 0">HideHideMeHideMeHideMe</a></li>
                             <li><a class="navLinks" id="firstLink" href="#">Home</a></li>
                             <li><a class="navLinks" id="secondLink" href="#aboutme-bgrd">About Me</a></li>
-                            <li><a class="navLinks" id="thirdLink" href="">Portfolio</a></li>
+                            <li><a class="navLinks" id="thirdLink" href="#portfolio-bgrd">Portfolio</a></li>
                             <li><a class="navLinks" id="fourthLink" href="#contactme-link">Contact Me</a></li>
 
                         </ul>
-                    </div><!--/.nav-collapse -->
-                </div>
+                    </div>
+
             </div>
         </div>
     </div>
@@ -41,24 +41,26 @@
             <div id="front">Yassine Ouedki</div>
             <div id="back">Welcome to my Page</div>
             <div id="left">Web Dev - Web Design</div>
-            <div id="right">Design</div>
-            <div id="top">JavaScript - JQUERY</div>
-            <div id="bottom">HTML & CSS</div>
+            <div id="right"><img src="IMG/weblogos.jpg" height="250" width="250"/></div>
+            <div id="top"><img src="IMG/laptopDoc.jpg" height="250" width="250"/></div>
+            <div id="bottom"><img src="IMG/cubes.jpg" height="250" width="250"/></div>
         </div>
     </div>
 </div>
 
 <div id="aboutme-bgrd">
     <div class="container">
-        <hr class="style-eight" style="opacity: 0">
-        <h2>About Me</h2>
+        <hr class="star-primary">
+        <h2 id="abt-me">About Me</h2>
+        <hr class="star-primary">
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
         <hr class="style-eight">
-            <h3>My Education</h3>
+        <h3>My Education</h3>
             <hr class="style-five">
 
         <div class="media">
             <a class="pull-left" href="#">
-                <img class="media-object img-rounded" src="img/codeup.png" alt="..." hfive="126px" width="110px"></a>
+                <img class="media-object img-rounded" src="img/codeup.png" alt="..." height="110px" width="110px"></a>
             <div class="media-body">
                 <h4 class="media-heading">CodeUp</h4>
                 <h5>Jr. Software Developer - In progress</h5>
@@ -78,11 +80,12 @@
 
         <div class="media">
             <a class="pull-left" href="#">
-                <img class="media-object img-rounded" src="img/iihem.jpg" alt="..." hfive="126px" width="110px"></a>
+                <img class="media-object img-rounded" src="img/iihem.jpg" alt="..." height="110px" width="110px"></a>
             <div class="media-body">
                 <h4 class="media-heading">International Institute for Higher Education in Morocco</h4>
                 <h5>B.S in Finance - Earned in 2008</h5>
                 <p>IIHEM gave me the opportunity to travel to the United States of America and pursue my higher education there. It was a long and a challenging journey full with great memories and fantastic learning experience from which I have sharpened my analytical, personal and professional skills.</p>
+                <br>
             </div>
         </div>
     </div>
@@ -90,7 +93,7 @@
 
 <div id="timeline-bgrd">
     <div class="container">
-        <h3>My Work Experiences</h3>
+        <h3 id="wokExp">My Work Experiences</h3>
         <div class="row">
             <ul class="timeline">
                 <li>
@@ -156,7 +159,7 @@
                             <h4>Graduate Assistant</h4>
                         </div>
                         <div class="timeline-body">
-                            <p>Devoloped Databases and conducted various charting analysis for various project. Prepared Power Point Presentations to demostrate the result of the donducted analysi. </p>
+                            <p>Developed Databases and conducted various charting analysis for various project. Prepared Power Point Presentations to demostrate the result of the conducted analysis. </p>
                         </div>
                         <div class="timeline-footer">
                             <p class="text-right">May 2010 - Apr 2011</p>
@@ -190,8 +193,84 @@
                 </li>
                 <li class="clearfix no-float"></li>
             </ul>
-        </div>
+        </div><hr class="breakLine">
     </div>
+</div>
+
+<div id="portfolio-bgrd">
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <hr class="star-primary">
+                    <h2>Portfolio</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/under-construction.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/under-construction.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/under-construction.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/under-construction.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/under-construction.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/under-construction.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 <div id="contactme-bgrd">
     <a id="contactme-link"></a>

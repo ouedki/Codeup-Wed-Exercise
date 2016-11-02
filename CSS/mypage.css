@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Acme');
-@import url(http://fonts.googleapis.com/css?family=Merriweather);
 
 div#bgrweb {
     background-image: url(../img/web.jpg);
@@ -10,16 +9,20 @@ div#bgrweb {
 }
 
 div#aboutme-bgrd {
-    background-color: #95bac5;
+    background-image: url(../img/silver.jpg);
 }
 
 div#timeline-bgrd {
-    background-color: #decfa0;
+    background-image: url(../img/silver.jpg);
+    opacity: 0.8;
+}
+div#portfolio-bgrd {
+    background-image: url(../img/silver.jpg);
 }
 
-.navbar-inverse .navbar-nav>li>a {
+.navbar-inverse .navbar-nav > li > a {
     color: black;
-    background-color: #82d0ff;
+    background-color: #c9c9c9;
     font-size: 19px;
     border-left: 1px solid black;
     opacity: 0.5;
@@ -46,7 +49,7 @@ div#timeline-bgrd {
     height: 250px;
     opacity: 0.8;
     color: #14161a;
-    font-size: 35px;
+    font-size: 50px;
     text-align: center;
 }
 
@@ -98,6 +101,10 @@ div#timeline-bgrd {
     100% {
         transform: rotateY(360deg);
     }
+}
+
+h3#wokExp {
+    color: black;
 }
 
 .timeline {
@@ -313,14 +320,17 @@ div#timeline-bgrd {
         margin-bottom: 30px;
     }
 }
+
 hr.style-five {
     border: 0;
     height: 0; /* Firefox... */
     box-shadow: 0 0 10px 1px black;
 }
-hr.style-five:after {  /* Not really supposed to work, but does */
-    content: "\00a0";  /* Prevent margin collapse */
+
+hr.style-five:after { /* Not really supposed to work, but does */
+    content: "\00a0"; /* Prevent margin collapse */
 }
+
 *,
 *:before,
 *:after {
@@ -344,6 +354,7 @@ form {
     text-align: center;
     margin: 20px auto;
 }
+
 form input, form textarea {
     border: 0;
     outline: 0;
@@ -356,17 +367,21 @@ form input, form textarea {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     resize: none;
 }
+
 form input:focus, form textarea:focus {
     box-shadow: 0 0px 2px #e74c3c !important;
 }
+
 form #input-submit {
     color: white;
     background: #e74c3c;
     cursor: pointer;
 }
+
 form #input-submit:hover {
     box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
 }
+
 form textarea {
     height: 126px;
 }
@@ -392,6 +407,7 @@ form textarea {
         margin-bottom: 0;
     }
 }
+
 .cf:before,
 .cf:after {
     content: " ";
@@ -401,13 +417,16 @@ form textarea {
 .cf:after {
     clear: both;
 }
+
 hr.style-eight {
     padding: 10px;
     border: none;
     border-top: medium double #333;
     color: #333;
     text-align: center;
+    margin-bottom: 0;
 }
+
 hr.style-eight:after {
     display: inline-block;
     position: relative;
@@ -415,4 +434,106 @@ hr.style-eight:after {
     font-size: 1.5em;
     padding: 0 0.25em;
     background: white;
+}
+
+div#contactme-bgrd {
+    background-image: url(../img/web.jpg);
+    opacity: 0.8;
+}
+
+h1#contatme {
+    color: #e74c3c;
+}
+
+#portfolio .portfolio-item {
+    margin: 0 0 15px;
+    right: 0;
+}
+
+#portfolio .portfolio-item .portfolio-link {
+    display: block;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption {
+    background: rgba(24, 188, 156, 0.9);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption:hover {
+    opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    top: 50%;
+    margin-top: -12px;
+    color: white;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content i {
+    margin-top: -12px;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
+#portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
+    margin: 0;
+}
+
+#portfolio * {
+    z-index: 2;
+}
+
+@media (min-width: 767px) {
+    #portfolio .portfolio-item {
+        margin: 0 0 30px;
+    }
+}
+hr.star-primary {
+    padding: 0;
+    border: none;
+    border-top: solid 5px;
+    text-align: center;
+    max-width: 250px;
+    margin: 25px auto 30px;
+}
+hr.star-primary:after {
+    font-family: FontAwesome;
+    display: inline-block;
+    position: relative;
+    top: -0.8em;
+    font-size: 2em;
+    padding: 0 0.25em;
+}
+
+hr.star-primary {
+    border-color: #2C3E50;
+}
+hr.star-primary:after {
+    background-color: white;
+    color: #2C3E50;
+}
+h2#abt-me {
+    text-align: center;
+}
+hr.breakLine {
+    border: none;
+    height: 10px;
+    background: linear-gradient(-135deg, #fff 5px, transparent 0) 0 5px, linear-gradient(135deg, #fff 5px, #8c8c8c 0) 0 5px;
+    background-color: #9596a1;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    background-size: 10px 10px;
 }
