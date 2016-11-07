@@ -1,38 +1,38 @@
-'use strict'
-var grades = 82;
+'use strict';
+var grades = (70+80+95)/3;
 if (grades>80) {
     console.log("You're awesome");
 }else {
     console.log("You need to practice more");
 }
 
-var name1 = "Ryan";
-var name2 = "Cameron";
-var name3 = "George";
-var amoutSpentByRyan = 250;
-var amoutSpentByCameron = 180;
-var amoutSpentByGeorge = 320;
+var ryan = "Ryan";
+var cameron = "Cameron";
+var george = "George";
+var amountSpentByRyan = 250;
+var amountSpentByCameron = 180;
+var amountSpentByGeorge = 320;
 var discount = 20;
 var amount;
 
 
-if (amoutSpentByRyan>200) {
-    amount = -(discount * amoutSpentByRyan*0.01)+amoutSpentByRyan
-    console.log(name1 + " you have spent " + amoutSpentByRyan + " your total after discount is: " + amount );
+if (amountSpentByRyan>200) {
+    amount = -(discount * amountSpentByRyan*0.01)+amountSpentByRyan;
+    console.log(ryan + " you have spent " + amountSpentByRyan + " and your total after discount is: " + amount);
 }else {
-    console.log(name1 + " your total is " + amoutSpentByRyan);
+    console.log(ryan + " your total is " + amountSpentByRyan);
 }
-if (amoutSpentByCameron>200) {
-    amount= -(discount * amoutSpentByRyan*0.01)+amoutSpentByRyan
-    console.log(name2 + " you have spent " + amoutSpentByCameron + " your total after discount is: " + amount );
+if (amountSpentByCameron>200) {
+    amount= -(discount * amountSpentByCameron*0.01)+amountSpentByCameron;
+    console.log(cameron + " you have spent " + amountSpentByCameron + " and your total after discount is: " + amount);
 }else {
-    console.log(name2 + " your total is " + amoutSpentByCameron);
+    console.log(cameron + " your total is " + amountSpentByCameron);
 }
-if (amoutSpentByGeorge>200) {
-    amount= -(discount * amoutSpentByGeorge*0.01)+amoutSpentByGeorge;
-    console.log(name3 + " you have spent " + amoutSpentByGeorge + " your total after discount is: " + amount );
+if (amountSpentByGeorge>200) {
+    amount= -(discount * amountSpentByGeorge*0.01)+amountSpentByGeorge;
+    console.log(george + " you have spent " + amountSpentByGeorge + " and your total after discount is: " + amount);
 }else {
-    console.log(name3 + " your total is " + amoutSpentByGeorge);
+    console.log(george + " your total is " + amountSpentByGeorge);
 }
 
 var flipACoin = Math.floor(Math.random()* 2);
