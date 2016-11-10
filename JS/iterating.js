@@ -13,4 +13,34 @@
     console.log(names[2]);
     console.log(names[3]);
 
+    console.log("***************");
+    console.log("Using For Loop.");
+    console.log("***************");
+
+    for(var i = 0; i<names.length; i+=1) {
+        console.log(names[i]);
+    }
+
+    console.log("*******************");
+    console.log("Using ForEach Loop.");
+    console.log("*******************");
+
+    names.forEach(function(name){
+        console.log(name);
+    })
+
+    console.log("****************");
+    console.log("Using a function");
+    console.log("****************");
+
+    function forEach (fnct, arry) {
+        for (var j=0; j<arry.length; j+=1) {
+            fnct(arry[j]);
+        }
+
+    }
+    forEach(function(name){
+        console.log(name)
+    } ,names)
+
 })();
