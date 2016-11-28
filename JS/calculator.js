@@ -16,7 +16,7 @@
     var num;
     var counter = 0;
 
-
+    //display number in left and right display
     var display = function () {
         num= this.innerHTML;
         if (midDisplay.value == '') {
@@ -26,6 +26,8 @@
         }
 
     };
+
+    //display operators in the mid display
     var displayMid = function () {
         counter=0;
         console.log(counter);
@@ -34,11 +36,13 @@
 
     };
 
-
+    //add event listeners to all number buttons
     for(var i=0; i < numbersButton.length; i++) {
         numbersButton[i].addEventListener('click', display)
 
     }
+
+    //add event listeners to all operator buttons
     for(var j=0; j < operatorButton.length; j++) {
         operatorButton[j].addEventListener('click', displayMid)
 
@@ -73,6 +77,7 @@
     };
     equalButton.addEventListener("click", opEqual);
 
+    //clear all displays
     var clearDisplay = function () {
         counter = 0;
         rightDisplay.value = "";
@@ -81,6 +86,7 @@
     };
     clearButton.addEventListener("click", clearDisplay);
 
+    //add power button
     var power = function () {
         var x =leftDisplay.value;
         x=Math.pow(x, 2);
@@ -89,6 +95,7 @@
     };
     powerButton.addEventListener("click", power);
 
+    //add square root button
     var sqrt = function () {
         var x =leftDisplay.value;
         x=Math.sqrt(x);
@@ -97,6 +104,7 @@
     };
     sqrtButton.addEventListener("click", sqrt);
 
+    //add plus minus button
     var plusMin = function () {
         if ((leftDisplay.value !== '') && (rightDisplay.value == '')) {
             leftDisplay.value *= -1;
@@ -107,11 +115,10 @@
 
         }
 
-
     };
     plusMinButton.addEventListener("click", plusMin);
 
-
+    //add percentage button
     var percentage = function () {
         if ((leftDisplay.value !== '') && (rightDisplay.value == '')) {
             var m =parseFloat(leftDisplay.value);
@@ -120,13 +127,14 @@
         }
         if (rightDisplay.value !== '') {
             var n =parseFloat(rightDisplay.value);
-            m/=100;
+            n/=100;
             rightDisplay.value=n;
         }
 
     };
     percentageButton.addEventListener("click", percentage);
 
+    //add exp button
     var exp = function () {
         var x =leftDisplay.value;
         x=Math.exp(x);
@@ -135,22 +143,25 @@
     };
     expButton.addEventListener("click", exp);
 
+    //decimal check
     var decimalCheck = function () {
-        num= this.innerHTML;
         counter += 1;
-        if ((leftDisplay.value !== '') && (rightDisplay.value == '')) {
+        num= this.innerHTML;
+        if ((leftDisplay.value == '') && (rightDisplay.value == '')) {
             if (counter > 1) {
                 console.log("no");
             } else {
                 leftDisplay.value += num;
             }
         }
-        if (rightDisplay.value !== '') {
+
+        if ((leftDisplay.value !== '') && (midDisplay.value !== '')) {
             if (counter > 1) {
                 console.log("no");
             } else {
                 rightDisplay.value += num;
             }
+
         }
 
 

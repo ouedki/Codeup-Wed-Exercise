@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Map</title>
+    <style>
+        #map-canvas {
+            width: 700px;
+            height: 450px;
+            border: 1px solid black;
+            box-shadow: 10px 10px 20px black;
+        }
+        html {
+            background-color: #e74c3c;
+        }
+        h1 {
+            text-shadow: 0 2px 5px #ccc;
+        }
+        input {
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+<h1>My Favorite Restaurants</h1>
+<div id="map-canvas"></div>
+<br>
+
+<input type="text" id="address_marker" placeholder="enter address"><br>
+<input type="text" id="description_marker" placeholder="enter description"><br>
+<button id="send">Send</button>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOwq1Zf2ZY5H8E5az8al2nxw_iTvThfys"></script>
+<script src="JS/google_maps_api.js"></script>
+</body>
+</html>
