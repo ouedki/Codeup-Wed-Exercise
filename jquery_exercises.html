@@ -31,35 +31,21 @@
 <script src="JS/jquery-2.2.4.js"></script>
 <script>
     $(document).ready(function () {
-//     var contents = $('#p_one').html();
-//     alert(contents);
-//     $('#p_one').css('color', 'red');
-//     $('#u_list li').css('color', 'blue');
-//     $('#u_list li').css('list-style', 'none');
-//     $('#sec_header').css('text-decoration', 'underline');
-//     $('#maim_header').css('text-align', 'center');
-//     $('.codeup').css({'border': '1px solid red',
-//           'margin': '15px',
-//           'background': '#f00',
-//           'color': 'silver'
-//        });
-//      $('#p_three').css('display', 'inline');
+        $('h1').click(function () {
+            $(this).css('background', 'pink');
+        });
+        $('p').dblclick(function () {
+            $(this).css('font-size', '18px');
+        });
+        $('li').hover(
+                function () {
+                    $(this).css('color', 'red');
+                },
+                function () {
+                    $(this).css('color', '#fff');
+                }
+        );
 
-//        $('li').css('font-size', '20px');
-//        $('li').css('background', '#ccc');
-//        $('p').css('background', '#ccc');
-//        $('h1').css({'background': 'black', 'color':'white'});
-//        $('li:nth-child(3)').css({'background': 'black', 'color': 'yellow' });
-//        $('li').css('list-style', 'none');
-//        var contents = $('h1').html();
-//        alert(contents);
-
-        $('li, p, h1').css('background', '#ccc');
-        $('li:nth-child(3)').css({'background': 'black', 'color': 'yellow' });
-        $('ul').children().css('list-style','none');
-        $('b').parent().css('color', 'blue');
-        $('li').first().css('color', 'red');
-        $('li').last().css('color', 'green');
     });
 </script>
 </body>
