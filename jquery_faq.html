@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Park Information</title>
+    <style>
+        .invisible {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
+        body {
+            background: black;
+            color: yellow;
+        }
+        .borderStyle {
+            color: black;
+            border: 1px solid yellow;
+            border-radius: 5px ;
+            background: yellow;
+            padding: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .whiteFont {
+            color: white;
+        }
+        .fade {
+            background: yellow;
+            height: 500px;
+            width: 500px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Yellowstone National Park FAQ</h1>
+<div class="fade"></div>
+    <dt><b>1. Is Yellowstone the largest national park?</b></dt>
+    <dd class="invisible">No. More than half of Alaska’s national park units are larger, including Wrangell–St. Elias National Park and Preserve, which is the largest unit (13 million acres) in the National Park System.</dd>
+    <dt><b>2. Is Yellowstone the most visited national park?</b></dt>
+    <dd class="invisible">Yellowstone is in the top five national parks for number of recreational visitors.</dd>
+    <dt><b>3. What is the difference between a national park and a national forest?</b></dt>
+    <dd class="invisible">National parks are administered by the Department of the Interior and national forests by the Department of Agriculture. </dd>
+    <dt><b>4. How many rangers work in Yellowstone?</b></dt>
+    <dd class="invisible">Approximately 773 people work for the National Park Service during the peak summer season. </dd>
+    <dt><b>5. How do you become a park ranger?</b></dt>
+    <dd class="invisible">Park rangers have a variety of different duties. Most have a bachelor’s degree in a related field.</dd>
+    <dt><b>6.Can we swim in rivers and lakes?</b></dt>
+    <dd class="invisible">Swimming is not recommended, and is occasionally prohibited, because most lakes and streams are dangerously cold.</dd>
+    <dt><b>7. What is the highest peak in the park?</b></dt>
+    <dd class="invisible">Eagle Peak in the southeastern part of Yellowstone is the highest at 11,358 feet.</dd>
+    <dt><b>8. Why is Yellowstone called a biosphere reserve and a world heritage site?</b></dt>
+    <dd class="invisible">The United Nations designated Yellowstone National Park as a biosphere reserve and a world heritage site in recognition of the worldwide significance of its natural and cultural resources. </dd>
+    <dt><b>9. What is the Continental Divide?</b></dt>
+    <dd class="invisible">Think of the Continental Divide as the crest of the continent.</dd>
+    <dt><b>10 .Is Yellowstone open in winter?</b></dt>
+    <dd class="invisible">Yes, though not all roads are open to cars.</dd>
+</dl>
+<a href="#" id="toggleClass">Click to toggles the class invisible on and off.</a>
+
+
+<script src="JS/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+    $(document).ready(function() {
+        $('#toggleClass').click(function(event) {
+            event.preventDefault();
+            $('.invisible').toggleClass('visible');
+        });
+        $('h1').click(function () {
+            $(this).addClass('borderStyle')
+        });
+        $('dd').click(function () {
+            $(this).addClass('whiteFont')
+        });
+        $(document).click(function () {
+            setTimeout(function () {
+                $(".fade").fadeOut();
+            }, 1000);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami</title>
+    <link href="https://fonts.googleapis.com/css?family=Freckle+Face|Press+Start+2P" rel="stylesheet">
+
+</head>
+<body>
+<h1>Konami Code</h1>
+<div id="konami"></div>
+<audio id="applause">
+    <source src="Audio/applause-4.mp3">
+</audio>
+
+<script src="JS/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+
+
+    $(document).ready(function() {
+        var key_codes = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+        var index = 0;
+
+        //function to play sound
+        function playSound() {
+            $("#applause")[0].play();
+        }
+
+        //function to change background
+        function changeBackground() {
+            $('body').css({'background': "url(IMG/cod.jpeg) no-repeat fixed",
+                           'background-size': 'cover'});
+        }
+
+        //function to change H1 text and style if Konami code is entered correctly
+        function changeHeaderText() {
+            $('h1').text('You Have Added 30 Lives!').css({'color': 'green',
+                'font-family':"'Freckle Face', cursive",
+                'font-size':'5em',
+                'text-shadow':'0 3px 0 #fff'});
+        }
+
+        //function to change H1 text and style when the wrong Konami is entered
+        function wrongKonamiText() {
+            $('h1').text('Wrong inputs.....No extra lives for you').css({'color': 'red',
+                'font-size': '4em',
+                'font-family':"'Freckle Face', cursive" })
+        }
+
+        $('body').keyup(function(event) {
+
+            if (key_codes[index] == event.keyCode) {
+                index++;
+            } else {
+                index = 0;
+                wrongKonamiText()
+            }
+
+            if (index == key_codes.length) {
+//              alert ("You have added 30 lives!");
+                changeBackground();
+                changeHeaderText();
+                playSound();
+            }
+
+        });
+
+    });
+
+</script>
+</body>
+</html>
