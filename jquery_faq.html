@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Basic Park Information</title>
     <style>
-        .invisible {
-            display: none;
-        }
+        /*.invisible {*/
+            /*display: none;*/
+        /*}*/
         body {
             background: black;
             color: yellow;
@@ -34,7 +34,7 @@
 </head>
 <body>
 <h1>Yellowstone National Park FAQ</h1>
-<div class="fade"></div>
+<!--<div class="fade"></div>-->
     <dt><b>1. Is Yellowstone the largest national park?</b></dt>
     <dd class="invisible">No. More than half of Alaska’s national park units are larger, including Wrangell–St. Elias National Park and Preserve, which is the largest unit (13 million acres) in the National Park System.</dd>
     <dt><b>2. Is Yellowstone the most visited national park?</b></dt>
@@ -88,41 +88,48 @@
 
     $(document).ready(function() {
 
-        //toggle btw visible and invisible class
+        //fadeout when clicking on dd
+        $('dd').click(function(event) {
+            event.preventDefault();
+            $('dd').fadeOut(1000);
+        });
+
+        //fadein when clicking on anchor tag
         $('#toggleClass').click(function(event) {
             event.preventDefault();
-            $('dd').toggle();
+            $('dd').fadeIn(1000);
         });
 
         //add class to h1 with border and background
         $('h1').click(function () {
             $(this).addClass('borderStyle')
         });
-        //add class to any clicked dd tag with white font
-        $('dd').click(function () {
-            $(this).addClass('whiteFont')
-        });
 
-        //fadeout the div after 1 second when clicked
-        $('.fade').click(function () {
-            setTimeout(function () {
-                $(".fade").fadeOut();
-            }, 1000);
-        });
+        //add class to any clicked dd tag with white font
+//        $('dd').click(function () {
+//            $(this).addClass('whiteFont')
+//        });
+//
+//        //fadeout the div after 1 second when clicked
+//        $('.fade').click(function () {
+//            setTimeout(function () {
+//                $(".fade").fadeOut();
+//            }, 1000);
+//        });
 
         //make the first li element in each ul bold
         $('ul').each(function () {
             $(this).children().first().css({'font-weight': 'bold', 'color': 'white'});
         });
 
-        //hide any li's clicked by adding class invisible
-        $('li').click(function () {
-        $(this).hide();
-        });
+//        //hide any li's clicked by adding class invisible
+//        $('li').click(function () {
+//        $(this).hide();
+//        });
 
-        //show all li's when clicking on h3 by adding class invisible
+        //use fade-toggle to fade out and in the li
         $('h3').click(function () {
-            $('li').show();
+            $('li').fadeToggle();
         });
     });
 </script>
