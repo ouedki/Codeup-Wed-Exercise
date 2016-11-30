@@ -7,9 +7,6 @@
         .invisible {
             display: none;
         }
-        .visible {
-            display: block;
-        }
         body {
             background: black;
             color: yellow;
@@ -31,6 +28,7 @@
             height: 500px;
             width: 500px;
         }
+
 
     </style>
 </head>
@@ -59,6 +57,29 @@
     <dd class="invisible">Yes, though not all roads are open to cars.</dd>
 </dl>
 <a href="#" id="toggleClass">Click to toggles the class invisible on and off.</a>
+<hr>
+<h3>Sequoia National Park</h3>
+<ul>
+    <li>Every year, more than 1.6 million people visit the park.</li>
+    <li>There are 275 caves that have been discovered.</li>
+    <li>Sequoia National Park weather is also very fascinating.</li>
+    <li>One of the more popular Sequoia National Park tours includes a journey called Trail of 100 Giants. </li>
+</ul>
+
+<h3>Rocky Mountain National Park</h3>
+<ul>
+    <li>It’s also the nation’s highest altitude National Park.</li>
+    <li>One of the park’s favorite routes for exploration is Trail Ridge Road.</li>
+    <li> Park the car to walk along Rocky Mountain’s 300 miles of hiking trails.</li>
+    <li>Surprisingly, there’s only one fourteener inside the park’s boundaries.</li>
+</ul>
+<h3>Great Sand Dunes National Park</h3>
+<ul>
+    <li>The dunes are the tallest in North America.</li>
+    <li>This sandbox of epic proportions measures 30 square miles and is estimated to hold more than 5 billion cubic meters of sand.</li>
+    <li>This National Park isn’t totally sand crazy.</li>
+    <li>Great Sand Dunes National Park is home to six known insect species that are found only within the park.</li>
+</ul>
 
 
 <script src="JS/jquery-2.2.4.js"></script>
@@ -66,20 +87,42 @@
     "use strict";
 
     $(document).ready(function() {
+
+        //toggle btw visible and invisible class
         $('#toggleClass').click(function(event) {
             event.preventDefault();
-            $('.invisible').toggleClass('visible');
+            $('dd').toggle();
         });
+
+        //add class to h1 with border and background
         $('h1').click(function () {
             $(this).addClass('borderStyle')
         });
+        //add class to any clicked dd tag with white font
         $('dd').click(function () {
             $(this).addClass('whiteFont')
         });
-        $(document).click(function () {
+
+        //fadeout the div after 1 second when clicked
+        $('.fade').click(function () {
             setTimeout(function () {
                 $(".fade").fadeOut();
             }, 1000);
+        });
+
+        //make the first li element in each ul bold
+        $('ul').each(function () {
+            $(this).children().first().css({'font-weight': 'bold', 'color': 'white'});
+        });
+
+        //hide any li's clicked by adding class invisible
+        $('li').click(function () {
+        $(this).hide();
+        });
+
+        //show all li's when clicking on h3 by adding class invisible
+        $('h3').click(function () {
+            $('li').show();
         });
     });
 </script>
